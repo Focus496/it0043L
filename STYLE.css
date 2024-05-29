@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    background-image: url('BACKGROUND.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 1000px;
+}
+
+.pokemon {
+    flex: 1 0 21%;
+    box-sizing: border-box;
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    transition: all 0.3s ease;
+    border: 2px solid transparent; /* default border */
+}
+
+.pokemon img {
+    max-width: 100%;
+    height: auto;
+}
+
+.pokemon span {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.pokemon:hover {
+    background-image: url('HOVER.png'); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+/* Individual Pokémon types with borders */
+.pokemon.mew {
+    background-color: #FADBD8;
+    border-color: #E74C3C; /* example border color for Mew */
+}
+
+.pokemon.abra {
+    background-color: #f9e79f;
+    border-color: #F1C40F; /* example border color for Abra */
+}
+
+.pokemon.venonat {
+    background-color: #A569BD;
+    border-color: #8E44AD; /* example border color for Venonat */
+}
+
+.pokemon.dratini {
+    background-color: #2B70A0;
+    border-color: #2874A6; /* example border color for Dratini */
+}
+
+.pokemon.eevee {
+    background-color: #E59866;
+    border-color: #D35400; /* example border color for Eevee */
+}
+
+.pokemon.squirtle {
+    background-color: #5DADE2;
+    border-color: #3498DB; /* example border color for Squirtle */
+}
+
+.pokemon.meowth {
+    background-color: #FEF5E7;
+    border-color: #FDEBD0; /* example border color for Meowth */
+}
+
+.pokemon.snorlax {
+    background-color: #2874A6;
+    border-color: #1F618D; /* example border color for Snorlax */
+}
+
+.pokemon.pikachu {
+    background-color: #F7DC6F;
+    border-color: #F4D03F; /* example border color for Pikachu */
+}
+
+.pokemon.psyduck {
+    background-color: #F7DC6F;
+    border-color: #F4D03F; /* example border color for Psyduck */
+}
+
+.pokemon.bulbasaur {
+    background-color: #58D68D;
+    border-color: #27AE60; /* example border color for Bulbasaur */
+}
+
+.pokemon.pidgey {
+    background-color: #F5B041;
+    border-color: #E67E22; /* example border color for Pidgey */
+}
+
+.type-electric{
+    background: #D4AC0D;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 6px;
+    margin: 0 2px;
+}
+
+.type-psychic{
+    background: #AF7AC5;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 6px;
+    margin: 0 2px;
+}
+
+.type-poison{
+    background: #512E5F ;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 6px;
+    margin: 0 2px;
+}
+
+.type-bug{
+    background: #73C6B6  ;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 6px;
+    margin: 0 2px;
+}
+
+.type-dragon{
+    background:  #EB984E ;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 6px;
+    margin: 0 2px;
+}
+
+.type-normal{
+    background: #CCD1D1;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 6px;
+    margin: 0 2px;
+}
+
+.type-water{
+    background: #2874A6 ;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 6px;
+    margin: 0 2px;
+}
+
+.type-grass{
+    background: #28B463  ;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 6px;
+    margin: 0 2px;
+}
+
+.type-flying{
+    background: #EBDEF0  ;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 6px;
+    margin: 0 2px;
+}
+
+@media (max-width: 768px) {
+    .pokemon {
+        flex: 1 0 30%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        display: block;
+    }
+    .pokemon {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+    .pokemon img {
+        max-width: 50px;
+        height: auto;
+    }
+    .pokemon::after {
+        content: url('pokeball.png');
+        max-width: 20px; /* smaller Pokéball icon */
+        height: auto;
+    }
+}
+
+@media (max-width: 320px) {
+    .pokemon {
+        display: block;
+        text-align: center;
+    }
+    .pokemon img {
+        max-width: 100px;
+        height: auto;
+    }
+    .pokemon::after {
+        content: none;
+    }
+}
